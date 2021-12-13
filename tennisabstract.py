@@ -82,12 +82,12 @@ class TennisAbstract:
                 current_year_row = False
                 continue
 
-            year, stats = self.scrap_player_year_end_ranking_tr(tr)
+            year, stats = self.__scrap_player_year_end_ranking_tr(tr)
             years_dict[year] = stats
 
         return years_dict
 
-    def scrap_player_year_end_ranking_tr(self, tr):
+    def __scrap_player_year_end_ranking_tr(self, tr):
         stats = {}
 
         td_list = tr.find_all("td")
